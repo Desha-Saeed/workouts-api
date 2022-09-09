@@ -11,7 +11,6 @@ app.use(express.json());
 //routes
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/user', userRoutes);
-z;
 const DB = process.env.MONGO_URL.replace(
   '<PASSWORD>',
   process.env.MONGO_PASSWORD
