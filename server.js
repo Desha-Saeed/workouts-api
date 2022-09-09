@@ -11,6 +11,7 @@ app.use(express.json());
 //routes
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/user', userRoutes);
+z;
 const DB = process.env.MONGO_URL.replace(
   '<PASSWORD>',
   process.env.MONGO_PASSWORD
@@ -19,6 +20,6 @@ const DB = process.env.MONGO_URL.replace(
 mongoose.connect(DB).then(() => console.log('DB connected successfuly'));
 
 //listen to port
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log(`Server is running on port, ${process.env.PORT}!`);
 });
